@@ -22,13 +22,20 @@ class _OnboardingState extends State<Onboarding> {
                 fit: BoxFit.cover,
               ),
             ),
-            Center(child: Image.asset("images/logo.jpg")),
+            Center(
+              child: Container(
+                margin: EdgeInsets.only(bottom: 160),
+                height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width / 1.5,
+                child: Image.asset("images/logo.jpg"),
+              ),
+            ),
             Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Center(
                   child: Container(
-                    margin: EdgeInsets.only(bottom: 30.0),
+                    margin: EdgeInsets.only(bottom: 70.0),
                     height: 50,
                     width: MediaQuery.of(context).size.width / 2,
                     decoration: BoxDecoration(
