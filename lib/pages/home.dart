@@ -22,6 +22,19 @@ class _HomeState extends State<Home> {
                 fit: BoxFit.cover,
               ),
             ),
+            Container(
+              child: Column(
+                children: [
+                  ListView(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(color: Colors.white),
+                      )
+                    ],
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
