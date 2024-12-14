@@ -25,7 +25,11 @@ class _OnboardingState extends State<Onboarding> {
             Center(child: Image.asset("images/logo.jpg")),
             Container(
               width: MediaQuery.of(context).size.width / 2,
-              decoration: BoxDecoration(),
+              decoration: BoxDecoration(color: Colors.white),
+              child: Text(
+                "start playing",
+                style: TextStyle(color: Colors.black),
+              ),
             ),
           ],
         ),
