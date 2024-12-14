@@ -24,13 +24,25 @@ class _OnboardingState extends State<Onboarding> {
             ),
             Center(child: Image.asset("images/logo.jpg")),
             Column(
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Container(
-                  width: MediaQuery.of(context).size.width / 2,
-                  decoration: BoxDecoration(color: Colors.white),
-                  child: Text(
-                    "start playing",
-                    style: TextStyle(color: Colors.black),
+                Center(
+                  child: Container(
+                    margin: EdgeInsets.only(bottom: 30.0),
+                    height: 50,
+                    width: MediaQuery.of(context).size.width / 2,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(30)),
+                    child: Center(
+                      child: Text(
+                        "start playing",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
                   ),
                 ),
               ],
