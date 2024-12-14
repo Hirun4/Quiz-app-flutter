@@ -14,10 +14,12 @@ class _OnboardingState extends State<Onboarding> {
       body: Container(
         child: Column(
           children: [
-            
+            Container(
+              height: MediaQuery.of(context).size.height,
+            )
           ],
         ),
       ),
-    )
+    );
   }
 }
