@@ -29,6 +29,13 @@ class _HomeState extends State<Home> {
                     children: [
                       Container(
                         decoration: BoxDecoration(color: Colors.white),
+                        child: Text(
+                          "Music",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.bold),
+                        ),
                       )
                     ],
                   )
