@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:quiz_app/pages/service.dart';
@@ -23,6 +25,10 @@ class _HomeState extends State<Home> {
           'Content-Type': 'application/json',
           'X-Api-Key': APIKEY,
         });
+
+    if (response.statusCode == 200) {
+      List<dynamic> jsonData = jsonDecode(response.body);
+    }
   }
 
   @override
