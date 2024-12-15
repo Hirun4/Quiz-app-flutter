@@ -23,6 +23,7 @@ class _HomeState extends State<Home> {
               ),
             ),
             Container(
+              margin: EdgeInsets.only(top: 50.0),
               child: Column(
                 children: [
                   ListView(
