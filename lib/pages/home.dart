@@ -316,6 +316,19 @@ class _HomeState extends State<Home> {
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        Container(
+                          child: Text(
+                            "Bill gates",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
                       ],
                     ),
                   ),
