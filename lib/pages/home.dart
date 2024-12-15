@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -13,6 +14,12 @@ class _HomeState extends State<Home> {
       fooddrink = false,
       sciencenature = false,
       entertainment = false;
+
+  Future<void> fetchQuiz(String category) async {
+    final response = await http.get(Uri.parse('https://api.api-ninjas.com/v1/trivia?category=$category
+'));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
