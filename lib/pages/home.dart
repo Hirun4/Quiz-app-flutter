@@ -23,14 +23,30 @@ class _HomeState extends State<Home> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 50.0),
+              margin: EdgeInsets.only(top: 50.0, left: 20.0),
               child: Column(
                 children: [
                   Container(
-                    height: 70,
+                    height: 50,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: [
+                        Container(
+                          width: 100.0,
+                          margin: EdgeInsets.only(right: 20.0),
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(20)),
+                          child: Center(
+                            child: Text(
+                              "Music",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ),
                         Container(
                           decoration: BoxDecoration(color: Colors.white),
                           child: Center(
@@ -42,10 +58,10 @@ class _HomeState extends State<Home> {
                                   fontWeight: FontWeight.bold),
                             ),
                           ),
-                        )
+                        ),
                       ],
                     ),
-                  )
+                  ),
                 ],
               ),
             )
