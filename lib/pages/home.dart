@@ -16,8 +16,15 @@ class _HomeState extends State<Home> {
       entertainment = false;
 
   Future<void> fetchQuiz(String category) async {
-    final response = await http.get(Uri.parse('https://api.api-ninjas.com/v1/trivia?category=$category
-'));
+    final response = await http.get(
+      Uri.parse('https://api.api-ninjas.com/v1/trivia?category=$category'),
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Api-Key': 
+
+    }
+    
+    );
   }
 
   @override
