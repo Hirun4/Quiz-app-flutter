@@ -93,7 +93,7 @@ class _HomeState extends State<Home> {
                                   elevation: 5.0,
                                   borderRadius: BorderRadius.circular(20),
                                   child: Container(
-                                    width: 100.0,
+                                    width: 120.0,
                                     decoration: BoxDecoration(
                                       color: Colors.orange,
                                       borderRadius: BorderRadius.circular(20),
@@ -143,7 +143,7 @@ class _HomeState extends State<Home> {
                                   elevation: 5.0,
                                   borderRadius: BorderRadius.circular(20),
                                   child: Container(
-                                    width: 100.0,
+                                    width: 120.0,
                                     decoration: BoxDecoration(
                                       color: Colors.orange,
                                       borderRadius: BorderRadius.circular(20),
@@ -193,7 +193,7 @@ class _HomeState extends State<Home> {
                                   elevation: 5.0,
                                   borderRadius: BorderRadius.circular(20),
                                   child: Container(
-                                    width: 100.0,
+                                    width: 150.0,
                                     decoration: BoxDecoration(
                                       color: Colors.orange,
                                       borderRadius: BorderRadius.circular(20),
@@ -220,7 +220,7 @@ class _HomeState extends State<Home> {
                                   setState(() {});
                                 },
                                 child: Container(
-                                  width: 140.0,
+                                  width: 150.0,
                                   margin: EdgeInsets.only(right: 20.0),
                                   decoration: BoxDecoration(
                                       color: Colors.white,
@@ -243,7 +243,7 @@ class _HomeState extends State<Home> {
                                   elevation: 5.0,
                                   borderRadius: BorderRadius.circular(20),
                                   child: Container(
-                                    width: 100.0,
+                                    width: 150.0,
                                     decoration: BoxDecoration(
                                       color: Colors.orange,
                                       borderRadius: BorderRadius.circular(20),
@@ -265,12 +265,12 @@ class _HomeState extends State<Home> {
                                   music = false;
                                   geography = false;
                                   fooddrink = false;
-                                  sciencenature = true;
-                                  entertainment = false;
+                                  sciencenature = false;
+                                  entertainment = true;
                                   setState(() {});
                                 },
                                 child: Container(
-                                  width: 140.0,
+                                  width: 150.0,
                                   margin: EdgeInsets.only(right: 20.0),
                                   decoration: BoxDecoration(
                                       color: Colors.white,
