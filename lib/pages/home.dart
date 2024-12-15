@@ -40,7 +40,7 @@ class _HomeState extends State<Home> {
                             ? Container(
                                 margin: EdgeInsets.only(right: 20.0),
                                 child: Material(
-                                  elevation: 3.0,
+                                  elevation: 5.0,
                                   borderRadius: BorderRadius.circular(20),
                                   child: Container(
                                     width: 100.0,
@@ -86,38 +86,106 @@ class _HomeState extends State<Home> {
                                   ),
                                 ),
                               ),
-                        Container(
-                          width: 120.0,
-                          margin: EdgeInsets.only(right: 20.0),
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20)),
-                          child: Center(
-                            child: Text(
-                              "Geography",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 20.0,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: 120.0,
-                          margin: EdgeInsets.only(right: 20.0),
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20)),
-                          child: Center(
-                            child: Text(
-                              "Fooddrink",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 20.0,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                        ),
+                        geography
+                            ? Container(
+                                margin: EdgeInsets.only(right: 20.0),
+                                child: Material(
+                                  elevation: 5.0,
+                                  borderRadius: BorderRadius.circular(20),
+                                  child: Container(
+                                    width: 100.0,
+                                    decoration: BoxDecoration(
+                                      color: Colors.orange,
+                                      borderRadius: BorderRadius.circular(20),
+                                    ),
+                                    child: Center(
+                                      child: Text(
+                                        "Geography",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 20.0,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              )
+                            : GestureDetector(
+                                onTap: () {
+                                  music = false;
+                                  geography = true;
+                                  fooddrink = false;
+                                  sciencenature = false;
+                                  entertainment = false;
+                                  setState(() {});
+                                },
+                                child: Container(
+                                  width: 120.0,
+                                  margin: EdgeInsets.only(right: 20.0),
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(20)),
+                                  child: Center(
+                                    child: Text(
+                                      "Geography",
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 20.0,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                        fooddrink
+                            ? Container(
+                                margin: EdgeInsets.only(right: 20.0),
+                                child: Material(
+                                  elevation: 5.0,
+                                  borderRadius: BorderRadius.circular(20),
+                                  child: Container(
+                                    width: 100.0,
+                                    decoration: BoxDecoration(
+                                      color: Colors.orange,
+                                      borderRadius: BorderRadius.circular(20),
+                                    ),
+                                    child: Center(
+                                      child: Text(
+                                        "Fooddrink",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 20.0,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              )
+                            : GestureDetector(
+                                onTap: () {
+                                  music = false;
+                                  geography = false;
+                                  fooddrink = true;
+                                  sciencenature = false;
+                                  entertainment = false;
+                                  setState(() {});
+                                },
+                                child: Container(
+                                  width: 120.0,
+                                  margin: EdgeInsets.only(right: 20.0),
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(20)),
+                                  child: Center(
+                                    child: Text(
+                                      "Fooddrink",
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 20.0,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ),
+                              ),
                         Container(
                           width: 140.0,
                           margin: EdgeInsets.only(right: 20.0),
