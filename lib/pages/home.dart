@@ -8,6 +8,11 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  bool music = true,
+      geography = false,
+      fooddrink = false,
+      sciencenature = false,
+      entertainment = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
