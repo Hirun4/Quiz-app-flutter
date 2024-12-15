@@ -79,6 +79,22 @@ class _HomeState extends State<Home> {
                             ),
                           ),
                         ),
+                        Container(
+                          width: 140.0,
+                          margin: EdgeInsets.only(right: 20.0),
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(20)),
+                          child: Center(
+                            child: Text(
+                              "Sciencenature",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
