@@ -320,16 +320,63 @@ class _HomeState extends State<Home> {
                           height: 20.0,
                         ),
                         Container(
+                          height: 50.0,
                           margin: EdgeInsets.only(left: 20.0, right: 20.0),
                           width: MediaQuery.of(context).size.width,
-                          decoration: BoxDecoration(border: Border.all()),
-                          child: Text(
-                            "Bill gates",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 20.0,
-                                fontWeight: FontWeight.bold),
+                          decoration: BoxDecoration(
+                              border: Border.all(width: 2.0),
+                              borderRadius: BorderRadius.circular(20.0)),
+                          child: Center(
+                            child: Text(
+                              "Bill gates",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        Container(
+                          height: 50.0,
+                          margin: EdgeInsets.only(left: 20.0, right: 20.0),
+                          width: MediaQuery.of(context).size.width,
+                          decoration: BoxDecoration(
+                              border: Border.all(width: 2.0),
+                              borderRadius: BorderRadius.circular(20.0)),
+                          child: Center(
+                            child: Text(
+                              "Albert Ainstain",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        Container(
+                          height: 50.0,
+                          margin: EdgeInsets.only(left: 20.0, right: 20.0),
+                          width: MediaQuery.of(context).size.width,
+                          decoration: BoxDecoration(
+                              border: Border.all(width: 2.0),
+                              borderRadius: BorderRadius.circular(20.0)),
+                          child: Center(
+                            child: Text(
+                              "Neil Armstron",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.bold),
+                            ),
                           ),
                         ),
                       ],
