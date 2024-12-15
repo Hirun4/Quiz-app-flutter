@@ -289,6 +289,14 @@ class _HomeState extends State<Home> {
                       ],
                     ),
                   ),
+                  SizedBox(
+                    height: 30.0,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(right: 20.0),
+                    height: MediaQuery.of(context).size.height / 2,
+                    decoration: BoxDecoration(color: Colors.white),
+                  )
                 ],
               ),
             )
