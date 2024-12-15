@@ -36,22 +36,49 @@ class _HomeState extends State<Home> {
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: [
-                        Container(
-                          width: 100.0,
-                          margin: EdgeInsets.only(right: 20.0),
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20)),
-                          child: Center(
-                            child: Text(
-                              "Music",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 20.0,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                        ),
+                        music
+                            ? Container(
+                                width: 100.0,
+                                margin: EdgeInsets.only(right: 20.0),
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(20)),
+                                child: Center(
+                                  child: Text(
+                                    "Music",
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 20.0,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                              )
+                            : GestureDetector(
+                                onTap: () {
+                                  music = true;
+                                  geography = false;
+                                  fooddrink = false;
+                                  sciencenature = false;
+                                  entertainment = false;
+                                  setState(() {});
+                                },
+                                child: Container(
+                                  width: 100.0,
+                                  margin: EdgeInsets.only(right: 20.0),
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(20)),
+                                  child: Center(
+                                    child: Text(
+                                      "Music",
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 20.0,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ),
+                              ),
                         Container(
                           width: 120.0,
                           margin: EdgeInsets.only(right: 20.0),
