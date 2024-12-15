@@ -28,6 +28,9 @@ class _HomeState extends State<Home> {
 
     if (response.statusCode == 200) {
       List<dynamic> jsonData = jsonDecode(response.body);
+      if (jsonData.isNotEmpty) {
+        Map<String, dynamic> quiz = jsonData[0];
+      }
     }
   }
 
