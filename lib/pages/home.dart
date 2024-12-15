@@ -320,6 +320,9 @@ class _HomeState extends State<Home> {
                           height: 20.0,
                         ),
                         Container(
+                          margin: EdgeInsets.only(left: 20.0, right: 20.0),
+                          width: MediaQuery.of(context).size.width,
+                          decoration: BoxDecoration(border: Border.all()),
                           child: Text(
                             "Bill gates",
                             textAlign: TextAlign.center,
