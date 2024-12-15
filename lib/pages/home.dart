@@ -293,12 +293,32 @@ class _HomeState extends State<Home> {
                     height: 30.0,
                   ),
                   Container(
+                    width: MediaQuery.of(context).size.width,
                     margin: EdgeInsets.only(right: 20.0),
                     height: MediaQuery.of(context).size.height / 2,
                     decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(20)),
-                  )
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        Container(
+                          width: MediaQuery.of(context).size.width / 2,
+                          child: Text(
+                            "Who was the midnight rider",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             )
