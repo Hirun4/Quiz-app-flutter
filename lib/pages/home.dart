@@ -48,10 +48,30 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         Container(
-                          decoration: BoxDecoration(color: Colors.white),
+                          width: 120.0,
+                          margin: EdgeInsets.only(right: 20.0),
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(20)),
                           child: Center(
                             child: Text(
-                              "Music",
+                              "Geography",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          width: 120.0,
+                          margin: EdgeInsets.only(right: 20.0),
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(20)),
+                          child: Center(
+                            child: Text(
+                              "Fooddrink",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 20.0,
