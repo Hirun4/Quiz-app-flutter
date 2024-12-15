@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:quiz_app/pages/service.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -17,14 +18,11 @@ class _HomeState extends State<Home> {
 
   Future<void> fetchQuiz(String category) async {
     final response = await http.get(
-      Uri.parse('https://api.api-ninjas.com/v1/trivia?category=$category'),
-    headers: {
-      'Content-Type': 'application/json',
-      'X-Api-Key': 
-
-    }
-    
-    );
+        Uri.parse('https://api.api-ninjas.com/v1/trivia?category=$category'),
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Api-Key': APIKEY,
+        });
   }
 
   @override
