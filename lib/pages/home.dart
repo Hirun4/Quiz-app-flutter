@@ -186,38 +186,106 @@ class _HomeState extends State<Home> {
                                   ),
                                 ),
                               ),
-                        Container(
-                          width: 140.0,
-                          margin: EdgeInsets.only(right: 20.0),
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20)),
-                          child: Center(
-                            child: Text(
-                              "Sciencenature",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 20.0,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: 140.0,
-                          margin: EdgeInsets.only(right: 20.0),
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20)),
-                          child: Center(
-                            child: Text(
-                              "Entertainment",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 20.0,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                        ),
+                        sciencenature
+                            ? Container(
+                                margin: EdgeInsets.only(right: 20.0),
+                                child: Material(
+                                  elevation: 5.0,
+                                  borderRadius: BorderRadius.circular(20),
+                                  child: Container(
+                                    width: 100.0,
+                                    decoration: BoxDecoration(
+                                      color: Colors.orange,
+                                      borderRadius: BorderRadius.circular(20),
+                                    ),
+                                    child: Center(
+                                      child: Text(
+                                        "Sciencenature",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 20.0,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              )
+                            : GestureDetector(
+                                onTap: () {
+                                  music = false;
+                                  geography = false;
+                                  fooddrink = false;
+                                  sciencenature = true;
+                                  entertainment = false;
+                                  setState(() {});
+                                },
+                                child: Container(
+                                  width: 140.0,
+                                  margin: EdgeInsets.only(right: 20.0),
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(20)),
+                                  child: Center(
+                                    child: Text(
+                                      "Sciencenature",
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 20.0,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                        entertainment
+                            ? Container(
+                                margin: EdgeInsets.only(right: 20.0),
+                                child: Material(
+                                  elevation: 5.0,
+                                  borderRadius: BorderRadius.circular(20),
+                                  child: Container(
+                                    width: 100.0,
+                                    decoration: BoxDecoration(
+                                      color: Colors.orange,
+                                      borderRadius: BorderRadius.circular(20),
+                                    ),
+                                    child: Center(
+                                      child: Text(
+                                        "Entertainment",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 20.0,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              )
+                            : GestureDetector(
+                                onTap: () {
+                                  music = false;
+                                  geography = false;
+                                  fooddrink = false;
+                                  sciencenature = true;
+                                  entertainment = false;
+                                  setState(() {});
+                                },
+                                child: Container(
+                                  width: 140.0,
+                                  margin: EdgeInsets.only(right: 20.0),
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(20)),
+                                  child: Center(
+                                    child: Text(
+                                      "Entertainment",
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 20.0,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ),
+                              ),
                       ],
                     ),
                   ),
