@@ -295,7 +295,9 @@ class _HomeState extends State<Home> {
                   Container(
                     margin: EdgeInsets.only(right: 20.0),
                     height: MediaQuery.of(context).size.height / 2,
-                    decoration: BoxDecoration(color: Colors.white),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20)),
                   )
                 ],
               ),
