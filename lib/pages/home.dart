@@ -26,19 +26,21 @@ class _HomeState extends State<Home> {
               margin: EdgeInsets.only(top: 50.0),
               child: Column(
                 children: [
-                  ListView(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(color: Colors.white),
-                        child: Text(
-                          "Music",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 20.0,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      )
-                    ],
+                  Expanded(
+                    child: ListView(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(color: Colors.white),
+                          child: Text(
+                            "Music",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
