@@ -384,12 +384,12 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         SizedBox(
-                          height: 90.0,
+                          height: 30.0,
                         ),
                         Container(
                           width: MediaQuery.of(context).size.width,
                           margin: EdgeInsets.only(right: 20.0),
-                          height: MediaQuery.of(context).size.height / 1.8,
+                          height: MediaQuery.of(context).size.height / 1.3,
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(20),
@@ -400,7 +400,7 @@ class _HomeState extends State<Home> {
                                 height: 20.0,
                               ),
                               Container(
-                                width: MediaQuery.of(context).size.width / 2,
+                                width: MediaQuery.of(context).size.width / 1.6,
                                 child: Text(
                                   question!,
                                   textAlign: TextAlign.center,
