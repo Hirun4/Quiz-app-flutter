@@ -108,7 +108,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: option.length != 3
+      body: option.length != 4
           ? Center(child: CircularProgressIndicator())
           : Container(
               child: Stack(
