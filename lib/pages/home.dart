@@ -75,30 +75,6 @@ class _HomeState extends State<Home> {
       setState(() {});
     }
   }
-  // Future<void> ResOption() async {
-  //   while (option.length < 3) {
-  //     final response = await http.get(
-  //       Uri.parse('https://api.api-ninjas.com/v1/randomword'),
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //         'X-Api-Key': APIKEY,
-  //       },
-  //     );
-
-  //     if (response.statusCode == 200) {
-  //       Map<String, dynamic> jsonData = jsonDecode(response.body);
-  //       if (jsonData.isNotEmpty) {
-  //         String word = jsonData["word"].toString();
-  //         if (!option.contains(word)) {
-  //           // Avoid duplicate words
-  //           option.add(word);
-  //         }
-  //       }
-  //     }
-  //   }
-  //   print(option);
-  //   setState(() {});
-  // }
 
   void shuffleList() {
     option = List.from(option)..shuffle(Random());
