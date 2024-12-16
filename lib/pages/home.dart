@@ -146,12 +146,15 @@ class _HomeState extends State<Home> {
                                       ),
                                     )
                                   : GestureDetector(
-                                      onTap: () {
+                                      onTap: () async {
                                         music = true;
                                         geography = false;
                                         fooddrink = false;
                                         sciencenature = false;
                                         entertainment = false;
+                                        await ResOption();
+                                        option = [];
+                                        await fetchQuiz("music");
                                         setState(() {});
                                       },
                                       child: Container(
