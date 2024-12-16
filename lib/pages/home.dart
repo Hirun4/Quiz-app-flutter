@@ -201,12 +201,15 @@ class _HomeState extends State<Home> {
                                       ),
                                     )
                                   : GestureDetector(
-                                      onTap: () {
+                                      onTap: () async {
                                         music = false;
                                         geography = true;
                                         fooddrink = false;
                                         sciencenature = false;
                                         entertainment = false;
+                                        await ResOption();
+                                        option = [];
+                                        await fetchQuiz("geography");
                                         setState(() {});
                                       },
                                       child: Container(
@@ -253,12 +256,15 @@ class _HomeState extends State<Home> {
                                       ),
                                     )
                                   : GestureDetector(
-                                      onTap: () {
+                                      onTap: () async {
                                         music = false;
                                         geography = false;
                                         fooddrink = true;
                                         sciencenature = false;
                                         entertainment = false;
+                                        await ResOption();
+                                        option = [];
+                                        await fetchQuiz("fooddrink");
                                         setState(() {});
                                       },
                                       child: Container(
@@ -305,12 +311,15 @@ class _HomeState extends State<Home> {
                                       ),
                                     )
                                   : GestureDetector(
-                                      onTap: () {
+                                      onTap: () async {
                                         music = false;
                                         geography = false;
                                         fooddrink = false;
                                         sciencenature = true;
                                         entertainment = false;
+                                        await ResOption();
+                                        option = [];
+                                        await fetchQuiz("sciencenature");
                                         setState(() {});
                                       },
                                       child: Container(
@@ -357,12 +366,15 @@ class _HomeState extends State<Home> {
                                       ),
                                     )
                                   : GestureDetector(
-                                      onTap: () {
+                                      onTap: () async {
                                         music = false;
                                         geography = false;
                                         fooddrink = false;
                                         sciencenature = false;
                                         entertainment = true;
+                                        await ResOption();
+                                        option = [];
+                                        await fetchQuiz("entertainment");
                                         setState(() {});
                                       },
                                       child: Container(
