@@ -22,6 +22,12 @@ class _HomeState extends State<Home> {
 
   List<String> option = [];
 
+  @override
+  void initState() {
+    super.initState();
+    ResOption();
+  }
+
   Future<void> fetchQuiz(String category) async {
     final response = await http.get(
         Uri.parse('https://api.api-ninjas.com/v1/trivia?category=$category'),
@@ -42,12 +48,11 @@ class _HomeState extends State<Home> {
   }
 
   Future<void> ResOption() async {
-    final response = await http.get(
-        Uri.parse('https://api.api-ninjas.com/v1/randomword?limit=3'),
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Api-Key': APIKEY,
-        });
+    final response = await http
+        .get(Uri.parse('https://api.api-ninjas.com/v1/randomword'), headers: {
+      'Content-Type': 'application/json',
+      'X-Api-Key': APIKEY,
+    });
 
     if (response.statusCode == 200) {
       Map<String, dynamic> jsonData = jsonDecode(response.body);
@@ -55,7 +60,10 @@ class _HomeState extends State<Home> {
         String word = jsonData["word"].toString();
         option.add(word);
       }
-      if (option.length < 3) {}
+      if (option.length < 3) {
+        ResOption();
+      }
+      print(option);
       setState(() {});
     }
   }
