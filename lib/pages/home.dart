@@ -66,8 +66,10 @@ class _HomeState extends State<Home> {
         String word = jsonData["word"].toString();
         option.add(word);
       }
-      if (option.length < 3) {
+      if (option.length < 4) {
         ResOption();
+      } else {
+        shuffleList();
       }
       print(option);
       setState(() {});
@@ -563,7 +565,9 @@ class _HomeState extends State<Home> {
                                   decoration: BoxDecoration(
                                       border: Border.all(
                                           color: answernow
-                                              ? answer == answer
+                                              ? answer ==
+                                                      option[3].replaceAll(
+                                                          RegExp(r'[\[\]]'), "")
                                                   ? Colors.green
                                                   : Colors.red
                                               : Colors.black45,
@@ -572,7 +576,8 @@ class _HomeState extends State<Home> {
                                           BorderRadius.circular(20.0)),
                                   child: Center(
                                     child: Text(
-                                      answer!,
+                                      option[3]
+                                          .replaceAll(RegExp(r'[\[\]]'), ""),
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
                                           color: Colors.black,
