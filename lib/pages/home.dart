@@ -18,6 +18,8 @@ class _HomeState extends State<Home> {
       sciencenature = false,
       entertainment = false;
 
+  String? question, answer;
+
   Future<void> fetchQuiz(String category) async {
     final response = await http.get(
         Uri.parse('https://api.api-ninjas.com/v1/trivia?category=$category'),
@@ -30,7 +32,10 @@ class _HomeState extends State<Home> {
       List<dynamic> jsonData = jsonDecode(response.body);
       if (jsonData.isNotEmpty) {
         Map<String, dynamic> quiz = jsonData[0];
+        question = quiz["question"];
+        answer = quiz["answer"];
       }
+      setState(() {});
     }
   }
 
