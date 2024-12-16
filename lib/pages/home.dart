@@ -402,7 +402,7 @@ class _HomeState extends State<Home> {
                               Container(
                                 width: MediaQuery.of(context).size.width / 2,
                                 child: Text(
-                                  "Who was the midnight rider",
+                                  question!,
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                       color: Colors.black,
