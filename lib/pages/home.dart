@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -16,8 +17,9 @@ class _HomeState extends State<Home> {
       geography = false,
       fooddrink = false,
       sciencenature = false,
-      entertainment = false,
-      answernow = false;
+      entertainment = false;
+
+  bool answernow = false;
 
   String? question, answer;
 
@@ -51,48 +53,53 @@ class _HomeState extends State<Home> {
     }
   }
 
-  // Future<void> ResOption() async {
-  //   final response = await http
-  //       .get(Uri.parse('https://api.api-ninjas.com/v1/randomword'), headers: {
-  //     'Content-Type': 'application/json',
-  //     'X-Api-Key': APIKEY,
-  //   });
-
-  //   if (response.statusCode == 200) {
-  //     Map<String, dynamic> jsonData = jsonDecode(response.body);
-  //     if (jsonData.isNotEmpty) {
-  //       String word = jsonData["word"].toString();
-  //       option.add(word);
-  //     }
-  //     if (option.length < 3) {
-  //       ResOption();
-  //     }
-  //     print(option);
-  //     setState(() {});
-  //   }
-  // }
   Future<void> ResOption() async {
-    while (option.length < 3) {
-      final response = await http.get(
-        Uri.parse('https://api.api-ninjas.com/v1/randomword'),
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Api-Key': APIKEY,
-        },
-      );
+    final response = await http
+        .get(Uri.parse('https://api.api-ninjas.com/v1/randomword'), headers: {
+      'Content-Type': 'application/json',
+      'X-Api-Key': APIKEY,
+    });
 
-      if (response.statusCode == 200) {
-        Map<String, dynamic> jsonData = jsonDecode(response.body);
-        if (jsonData.isNotEmpty) {
-          String word = jsonData["word"].toString();
-          if (!option.contains(word)) {
-            // Avoid duplicate words
-            option.add(word);
-          }
-        }
+    if (response.statusCode == 200) {
+      Map<String, dynamic> jsonData = jsonDecode(response.body);
+      if (jsonData.isNotEmpty) {
+        String word = jsonData["word"].toString();
+        option.add(word);
       }
+      if (option.length < 3) {
+        ResOption();
+      }
+      print(option);
+      setState(() {});
     }
-    print(option);
+  }
+  // Future<void> ResOption() async {
+  //   while (option.length < 3) {
+  //     final response = await http.get(
+  //       Uri.parse('https://api.api-ninjas.com/v1/randomword'),
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //         'X-Api-Key': APIKEY,
+  //       },
+  //     );
+
+  //     if (response.statusCode == 200) {
+  //       Map<String, dynamic> jsonData = jsonDecode(response.body);
+  //       if (jsonData.isNotEmpty) {
+  //         String word = jsonData["word"].toString();
+  //         if (!option.contains(word)) {
+  //           // Avoid duplicate words
+  //           option.add(word);
+  //         }
+  //       }
+  //     }
+  //   }
+  //   print(option);
+  //   setState(() {});
+  // }
+
+  void shuffleList() {
+    option = List.from(option)..shuffle(Random());
     setState(() {});
   }
 
