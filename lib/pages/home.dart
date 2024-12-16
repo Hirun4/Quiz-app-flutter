@@ -20,6 +20,8 @@ class _HomeState extends State<Home> {
 
   String? question, answer;
 
+  List<String> option = [];
+
   Future<void> fetchQuiz(String category) async {
     final response = await http.get(
         Uri.parse('https://api.api-ninjas.com/v1/trivia?category=$category'),
@@ -48,12 +50,12 @@ class _HomeState extends State<Home> {
         });
 
     if (response.statusCode == 200) {
-      List<dynamic> jsonData = jsonDecode(response.body);
+      Map<String, dynamic> jsonData = jsonDecode(response.body);
       if (jsonData.isNotEmpty) {
-        Map<String, dynamic> quiz = jsonData[0];
-        question = quiz["question"];
-        answer = quiz["answer"];
+        String word = jsonData["word"].toString();
+        option.add(word);
       }
+      if (option.length < 3) {}
       setState(() {});
     }
   }
