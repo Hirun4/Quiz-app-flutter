@@ -16,7 +16,8 @@ class _HomeState extends State<Home> {
       geography = false,
       fooddrink = false,
       sciencenature = false,
-      entertainment = false;
+      entertainment = false,
+      answernow = false;
 
   String? question, answer;
 
