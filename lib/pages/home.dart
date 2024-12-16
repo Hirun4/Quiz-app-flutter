@@ -39,6 +39,25 @@ class _HomeState extends State<Home> {
     }
   }
 
+  Future<void> ResOption() async {
+    final response = await http.get(
+        Uri.parse('https://api.api-ninjas.com/v1/randomword?limit=3'),
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Api-Key': APIKEY,
+        });
+
+    if (response.statusCode == 200) {
+      List<dynamic> jsonData = jsonDecode(response.body);
+      if (jsonData.isNotEmpty) {
+        Map<String, dynamic> quiz = jsonData[0];
+        question = quiz["question"];
+        answer = quiz["answer"];
+      }
+      setState(() {});
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
