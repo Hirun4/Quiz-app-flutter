@@ -440,7 +440,15 @@ class _HomeState extends State<Home> {
                                       EdgeInsets.only(left: 20.0, right: 20.0),
                                   width: MediaQuery.of(context).size.width,
                                   decoration: BoxDecoration(
-                                      border: Border.all(width: 2.0),
+                                      border: Border.all(
+                                          color: answernow
+                                              ? answer ==
+                                                      option[0].replaceAll(
+                                                          RegExp(r'[\[\]]'), "")
+                                                  ? Colors.green
+                                                  : Colors.red
+                                              : Colors.black45,
+                                          width: 2.0),
                                       borderRadius:
                                           BorderRadius.circular(20.0)),
                                   child: Center(
@@ -470,7 +478,15 @@ class _HomeState extends State<Home> {
                                       EdgeInsets.only(left: 20.0, right: 20.0),
                                   width: MediaQuery.of(context).size.width,
                                   decoration: BoxDecoration(
-                                      border: Border.all(width: 2.0),
+                                      border: Border.all(
+                                          color: answernow
+                                              ? answer ==
+                                                      option[1].replaceAll(
+                                                          RegExp(r'[\[\]]'), "")
+                                                  ? Colors.green
+                                                  : Colors.red
+                                              : Colors.black45,
+                                          width: 2.0),
                                       borderRadius:
                                           BorderRadius.circular(20.0)),
                                   child: Center(
@@ -500,7 +516,15 @@ class _HomeState extends State<Home> {
                                       EdgeInsets.only(left: 20.0, right: 20.0),
                                   width: MediaQuery.of(context).size.width,
                                   decoration: BoxDecoration(
-                                      border: Border.all(width: 2.0),
+                                      border: Border.all(
+                                          color: answernow
+                                              ? answer ==
+                                                      option[2].replaceAll(
+                                                          RegExp(r'[\[\]]'), "")
+                                                  ? Colors.green
+                                                  : Colors.red
+                                              : Colors.black45,
+                                          width: 2.0),
                                       borderRadius:
                                           BorderRadius.circular(20.0)),
                                   child: Center(
@@ -519,22 +543,35 @@ class _HomeState extends State<Home> {
                               SizedBox(
                                 height: 20.0,
                               ),
-                              Container(
-                                height: 50.0,
-                                margin:
-                                    EdgeInsets.only(left: 20.0, right: 20.0),
-                                width: MediaQuery.of(context).size.width,
-                                decoration: BoxDecoration(
-                                    border: Border.all(width: 2.0),
-                                    borderRadius: BorderRadius.circular(20.0)),
-                                child: Center(
-                                  child: Text(
-                                    answer!,
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 20.0,
-                                        fontWeight: FontWeight.bold),
+                              GestureDetector(
+                                onTap: () {
+                                  answernow = true;
+                                  setState(() {});
+                                },
+                                child: Container(
+                                  height: 50.0,
+                                  margin:
+                                      EdgeInsets.only(left: 20.0, right: 20.0),
+                                  width: MediaQuery.of(context).size.width,
+                                  decoration: BoxDecoration(
+                                      border: Border.all(
+                                          color: answernow
+                                              ? answer == answer
+                                                  ? Colors.green
+                                                  : Colors.red
+                                              : Colors.black45,
+                                          width: 2.0),
+                                      borderRadius:
+                                          BorderRadius.circular(20.0)),
+                                  child: Center(
+                                    child: Text(
+                                      answer!,
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 20.0,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                               ),
